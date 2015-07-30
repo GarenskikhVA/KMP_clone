@@ -1,0 +1,18 @@
+<h1> This is index </h1>
+
+<% @posts.each do |post|  %>
+<%= post.number %>
+<br>
+<%= post.body %> 
+<br>
+Рейтинг: <div id="rating<%= post.id %>"><%= post.rating %> </div>
+<br>
+<button type="button" onclick="incratingajax(<%= post.id %>)">Любо!</button>
+<br>
+<% end %>
+
+
+
+<br>
+
+<%= link_to 'Новая статья', :action => 'new' %><br />
